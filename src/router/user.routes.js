@@ -19,7 +19,6 @@ router
 //   .post('/user/tambah', insert)
   .put('/user/:id',update)
   .delete('/user/:id', destroy)
-//   .delete('/user/:id',remove, destroy)
    .post('/register' , register)
    .post('/login',login)
 

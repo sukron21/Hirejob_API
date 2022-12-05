@@ -46,7 +46,7 @@ const perusahaanModel = {
   }, 
   checkUsername:(username)=>{
     return new Promise((resolve, reject)=>{
-      db.query(`select * from perusahaans where username='${username}'`, (err, result)=>{
+      db.query(`select * from perusahaans where username ilike '${username}'`, (err, result)=>{
         if (err) {
           reject(err)
         }

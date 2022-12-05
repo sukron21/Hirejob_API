@@ -1,4 +1,4 @@
-require('dotenv').config()
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -20,6 +20,6 @@ app.use(userRouter)
 app.use(perusahaanRouter)
 app.use(hireRouter)
 
-app.listen(3001,()=>{
+app.listen(process.env.PORT1,()=>{
     console.log('Service Running on port 3001');
 })

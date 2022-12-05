@@ -43,7 +43,7 @@ const userModel = {
   },
   nameDetail: (username) => {
     return new Promise((resolve, reject) => {
-      db.query(`select * from users where username='${username}'`,
+      db.query(`select * from users where username ilike '%${username}%'`,
         (err, result) => {
           if (err) {
             reject(err)
