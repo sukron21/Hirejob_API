@@ -60,8 +60,8 @@ DRIVE_REFRESH_TOKEN=
 
 ## Related Project
 
-- [Nibiru Chat Client](https://github.com/andry-pebrianto/nibiruchat-client)
-- [Nibiru Chat Demo](https://nibiruchat.netlify.app/)
+- [Telegram Chat Client](https://github.com/sukron21/Hirejob_API.git)
+- [Telegram Chat Demo](https://nibiruchat.netlify.app/)
 
 ## Authors
 
