@@ -35,6 +35,19 @@ This is a Restful API repository for Nibiru Chat. This Restful API is built usin
 </ul>
 <hr/>
 
+### Package
+- bcrypt
+- body-parser
+- cors
+- dotenv
+- express
+- helmet
+- jsonwebtoken
+- multer
+- nodemon
+- pg
+- xss-clean
+
 ### Installation
 
 <li>- Clone this project with `git clone https://github.com/sukron21/Hirejob_API`</li>
