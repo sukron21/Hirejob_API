@@ -80,7 +80,7 @@ JWT_SECRET=
   - Body: None
   - Token: Required
   - Desc: Get detailed user data based on the entered id
-- PUT | `/user/
+- PUT | `/user/:id
   - Body:
     - username (required | alphabet | max 50)
     - phone (required | number | max 13)
@@ -102,6 +102,43 @@ JWT_SECRET=
 - DELETE | `/user/:id`
   - Body: None
   - Desc: Delete user data based on the entered id
+
+### /perusahaan
+
+- GET | `/perusahaan`
+  - Body: None
+  -  - limit (number | default 3)
+    - page (number | default 1)
+    -asc (asc | asc)
+    -sort (sort | username)
+  - Desc: Get a list of users ascending with username  in the database
+- GET | `/perusahaan/:id`
+  - Body: None
+  - Token: Required
+  - Desc: Get detailed user data based on the entered id
+- PUT | `/perusahaan/:id
+  - Body:
+    - username (required | alphabet | max 50)
+    - phone (required | number | max 13)
+  - Desc: Update user data based on entered id
+  - POST | `/perusahaan/register`
+  - Body:
+    - username (required)
+    - email (required | valid email)
+    - password (required)
+    -phone (required)
+  - Desc: register
+- POST | `/perusahaan/login`
+  - Body:
+    - email (required | valid email)
+    - password (required)
+  - Token: Not required
+  - Desc: Login
+  
+- DELETE | `/perusahaan/:id`
+  - Body: None
+  - Desc: Delete user data based on the entered id
+  
 
 
 <!-- RELATED PROJECT -->
