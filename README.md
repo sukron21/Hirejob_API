@@ -67,6 +67,41 @@ JWT_SECRET=
 - Run program with `npm run dev` for development and `npm run start` for production
 
 ## Endpoint List
+### /user
+
+- GET | `/user`
+  - Body: None
+  -  - limit (number | default 3)
+    - page (number | default 1)
+    -asc (asc | asc)
+    -sort (sort | username)
+  - Desc: Get a list of users ascending with username  in the database
+- GET | `/user/:id`
+  - Body: None
+  - Token: Required
+  - Desc: Get detailed user data based on the entered id
+- PUT | `/user/
+  - Body:
+    - username (required | alphabet | max 50)
+    - phone (required | number | max 13)
+  - Desc: Update user data based on entered id
+  - POST | `/register`
+  - Body:
+    - username (required)
+    - email (required | valid email)
+    - password (required)
+    -phone (required)
+  - Desc: register
+- POST | `/login`
+  - Body:
+    - email (required | valid email)
+    - password (required)
+  - Token: Not required
+  - Desc: Login
+  
+- DELETE | `/user/:id`
+  - Body: None
+  - Desc: Delete user data based on the entered id
 
 
 <!-- RELATED PROJECT -->
