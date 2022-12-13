@@ -36,17 +36,17 @@ This is a Restful API repository for . This Restful API is built using ExpressJS
 <hr/>
 
 ### Package
-- npm i bcrypt
-- npm i body-parser
-- npm i cors
-- npm i dotenv
-- npm i express
-- npm i helmet
-- npm i jsonwebtoken
-- npm i multer
-- npm i nodemon
-- npm i pg
-- npm i xss-clean
+- bcrypt
+- body-parser
+- cors
+- dotenv
+- express
+- helmet
+- jsonwebtoken
+- multer
+- nodemon
+- pg
+- xss-clean
 
 ### Installation
 
