@@ -24,10 +24,6 @@ This is a Restful API repository for Nibiru Chat. This Restful API is built usin
 - Setting .env
 
 ```bash
-APP_NAME=
-NODE_ENV=
-PORT=
-API_URL=
 
 # database
 DB_HOST=
@@ -38,16 +34,6 @@ DB_PORT=
 
 # jwt
 JWT_SECRET=
-
-# google
-EMAIL_FROM=
-EMAIL_USER=
-GOOGLE_CLIENT_ID=
-GOOGLE_CLIENT_SECRET=
-REDIRECT_URI=
-GMAIL_REFRESH_TOKEN=
-DRIVE_REFRESH_TOKEN=
-```
 
 ### Executing program
 
