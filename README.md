@@ -33,7 +33,6 @@ This is a Restful API repository for Nibiru Chat. This Restful API is built usin
     <li>router ||<span><b><i>The router is used to set the endpoint of this application.</i></b></span></li>
   </ul>
 </ul>
-<a href='#table-of-content'>Back to top</a>
 <hr/>
 
 ### Installation
