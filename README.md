@@ -35,18 +35,7 @@ This is a Restful API repository for . This Restful API is built using ExpressJS
 </ul>
 <hr/>
 
-### Package
-- bcrypt
-- body-parser
-- cors
-- dotenv
-- express
-- helmet
-- jsonwebtoken
-- multer
-- nodemon
-- pg
-- xss-clean
+
 
 ### Installation
 
@@ -74,6 +63,19 @@ JWT_SECRET=
   <li>When there is a description of the Server running on Port (with the port you have specified), the API is ready to use.</li>
 </ol>
 <hr />
+
+### Package
+- bcrypt
+- body-parser
+- cors
+- dotenv
+- express
+- helmet
+- jsonwebtoken
+- multer
+- nodemon
+- pg
+- xss-clean
 
 ### Executing program
 
