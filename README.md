@@ -19,11 +19,15 @@ This is a Restful API repository for Nibiru Chat. This Restful API is built usin
 
 ### Installation
 
-- Clone this project with `git clone https://github.com/sukron21/Hirejob_API`
+- Clone this project with `git clone https://github.com/andry-pebrianto/nibiruchat-api.git`
 - Install package required with `npm install`
 - Setting .env
 
 ```bash
+APP_NAME=
+NODE_ENV=
+PORT=
+API_URL=
 
 # database
 DB_HOST=
@@ -35,6 +39,8 @@ DB_PORT=
 # jwt
 JWT_SECRET=
 
+```
+
 ### Executing program
 
 - Run program with `npm run dev` for development and `npm run start` for production
@@ -44,12 +50,10 @@ JWT_SECRET=
 
 <!-- RELATED PROJECT -->
 
-
 ## Related Project
 
 - [Telegram Chat Client](https://github.com/sukron21/Hirejob_API.git)
 - [Telegram Chat Demo](https://nibiruchat.netlify.app/)
-
 
 ## Authors
 
@@ -58,4 +62,3 @@ Contributors names and contact info:
 1. Rahmat Furqon
 
 - [Linkedin](www.linkedin.com/in/furqon-rahmat)
-
