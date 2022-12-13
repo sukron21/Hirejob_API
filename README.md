@@ -48,8 +48,8 @@ JWT_SECRET=
 
 ## Related Project
 
-- [Telegram Chat Client](https://github.com/sukron21/Hirejob_API.git)
-- [Telegram Chat Demo](https://nibiruchat.netlify.app/)
+- [Telegram Chat API](https://github.com/sukron21/week_10_hirejob_App)
+- [Telegram Chat App](https://github.com/sukron21/Hirejob_API)
 
 ## Authors
 
