@@ -155,14 +155,6 @@ JWT_SECRET=
   - Desc: Delete user data based on the entered id
   
 
-
-<!-- RELATED PROJECT -->
-
-## Related Project
-
-- [Telegram Chat API](https://github.com/sukron21/week_10_hirejob_App)
-- [Telegram Chat App](https://github.com/sukron21/Hirejob_API)
-
 ## Authors
 
 Contributors names and contact info:
@@ -170,3 +162,5 @@ Contributors names and contact info:
 1. Rahmat Furqon
 
 - [Linkedin](www.linkedin.com/in/furqon-rahmat)
+- [Telegram Chat App](https://github.com/sukron21/week_10_hirejob_App)
+- [Telegram Chat API](https://github.com/sukron21/Hirejob_API)
