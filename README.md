@@ -163,8 +163,8 @@ Contributors names and contact info:
 
 - [Deploy](https://week-10-hirejob-app-ermn.vercel.app/)
 
-- [Telegram Chat App](https://github.com/sukron21/week_10_hirejob_App)
+- [Hirejob App](https://github.com/sukron21/week_10_hirejob_App)
 
-- [Telegram Chat API](https://github.com/sukron21/Hirejob_API)
+- [Hirejob API](https://github.com/sukron21/Hirejob_API)
 
 - [Linkedin](www.linkedin.com/in/furqon-rahmat)
