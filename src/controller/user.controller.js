@@ -47,8 +47,13 @@ const userController = {
   },
   detailname: (req, res) => {
     const name = req.params.username
+    const sort = req.query.sort
+    const asc = req.query.asc
+    const page = parseInt(req.query.page) || 1
+    const limit = parseInt(req.query.limit) || 5
+    const offset = (page - 1) * limit
     userModel
-      .nameDetail(name)
+      .nameDetail(name,sort,asc,limit, offset)
       .then((result) => {
         res.json(result)
       })

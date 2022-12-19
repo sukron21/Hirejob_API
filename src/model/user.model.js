@@ -41,9 +41,9 @@ const userModel = {
       })
     })
   },
-  nameDetail: (username) => {
+  nameDetail: (username, sort,asc,limit, offset) => {
     return new Promise((resolve, reject) => {
-      db.query(`select * from users where username ilike '%${username}%'`,
+      db.query(`select * from users where username ilike '%${username}%' ORDER BY ${sort} ${asc} LIMIT ${limit} OFFSET ${offset}`,
         (err, result) => {
           if (err) {
             reject(err)
