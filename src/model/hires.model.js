@@ -34,12 +34,12 @@ const hireModel = {
       })
     })
   },
-  store: (projek, email, phone, deskripsi) => {
+  store: (projek, email, phone, deskripsi, iduser, idperekrut, nama) => {
     return new Promise((resolve, reject) => {
       db.query(`
-            INSERT INTO hires ( projek, email, phone, deskripsi)
+            INSERT INTO hires ( projek, email, phone, deskripsi , iduser, idperekrut, nama)
             VALUES
-            ( '${projek}','${email}','${phone}','${deskripsi}')
+            ( '${projek}','${email}','${phone}','${deskripsi}','${iduser}','${idperekrut}','${nama}')
             `, (err, res) => {
         if (err) {
           reject(err)

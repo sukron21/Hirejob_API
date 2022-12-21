@@ -38,9 +38,9 @@ const userController = {
       })
   },
   insert: (req, res) => {
-    const { projek, email, phone, deskripsi } = req.body
+    const { projek, email, phone, deskripsi, iduser, idperekrut, nama } = req.body
     hireModel
-      .store(  projek, email, phone, deskripsi)
+      .store(  projek, email, phone, deskripsi, iduser, idperekrut, nama)
       .then((result) => {
         res.json('Account added successfully')
       })

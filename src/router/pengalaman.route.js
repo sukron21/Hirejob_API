@@ -12,7 +12,7 @@ router
   .get('/pengalaman/join/:id', listjoin)
   .get('/pengalaman/:id', detail)
 //   .post('/user/tambah', insert)
-  .post('/pengalaman',upload,insert)
+  .post('/pengalaman',insert)
   .delete('/pengalaman/:id', destroy)
 
 module.exports = router
