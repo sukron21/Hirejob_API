@@ -53,11 +53,11 @@ const userModel = {
     })
   },
   
-  register:({username,email, phone, password})=>{
+  register:({username,email, phone, password,photo,photo_pub_id,photo_url,photo_secure_url})=>{
     return new Promise((resolve,reject)=>{
-        db.query(`insert into users (username,email, phone, password) 
+        db.query(`insert into users (username,email, phone, password,photo,photo_pub_id,photo_url,photo_secure_url) 
         values
-        ('${username}','${email}','${phone}','${password}')`,(err,res)=>{
+        ('${username}','${email}','${phone}','${password}','${photo}','${photo_pub_id}','${photo_url}','${photo_secure_url}')`,(err,res)=>{
             if (err) {
                 reject(err)
               }
@@ -65,7 +65,8 @@ const userModel = {
         })
     })
   },  
-  updateAccount: (id,username, email,phone,password,jobdesk,domisili,loker,diskripsi,instagram,linkedin) => {
+  updateAccount: (data) => {
+    console.log("model",data)
     return new Promise((resolve, reject) => {
       db.query(
        ` UPDATE users SET
@@ -78,10 +79,11 @@ const userModel = {
         loker = COALESCE ($7, loker),
         diskripsi = COALESCE ($8, diskripsi),
         instagram = COALESCE ($9, instagram),
-        linkedin = COALESCE ($10, linkedin)  
-        WHERE id = $11
+        linkedin = COALESCE ($10, linkedin),
+        skill = COALESCE ($11, skill)
+        WHERE id = $12
         `,
-        [username, email,phone, password, jobdesk,domisili, diskripsi,loker, instagram, linkedin, id],(err, res) => {
+        [data.username, data.email, data.phone, data.password, data.jobdesk,data.domisili, data.diskripsi, data.loker, data.instagram, data.linkedin, data.skill, data.id],(err, res) => {
           if (err) {
             reject(err)
           }
@@ -89,7 +91,24 @@ const userModel = {
         })
       })
     },
-  
+    updateAccountPhoto: ({photo,photo_pub_id,photo_url,photo_secure_url,id}) => {
+      return new Promise((resolve, reject) => {
+        db.query(
+         ` UPDATE users SET
+          photo = COALESCE ($1, photo),
+          photo_pub_id = COALESCE ($2, photo_pub_id),
+          photo_url = COALESCE ($3, photo_url),
+          photo_secure_url = COALESCE ($4, photo_secure_url) 
+          WHERE id = $5
+          `,
+          [photo,photo_pub_id,photo_url,photo_secure_url,id],(err, res) => {
+            if (err) {
+              reject(err)
+            }
+            resolve(res)
+          })
+        })
+      },
   delete: (id) => {
     return new Promise((resolve, reject) => {
       db.query(`DELETE FROM users WHERE id = ${id};`, (err, res) => {

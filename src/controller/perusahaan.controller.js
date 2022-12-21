@@ -41,6 +41,22 @@ const perusahaanController = {
         failed(res, err.message,'failed','by id user failed')
       })
   },
+  listpagination: (req, res) => {
+    const sort = req.query.sort
+    const asc = req.query.asc
+    const page = parseInt(req.query.page) || 1
+    const limit = parseInt(req.query.limit) || 5
+    const offset = (page - 1) * limit
+    userModel
+      .selectAllLimit(sort,asc,limit, offset)
+      // console.log(listAll)
+      .then((result) => {
+        res.json(result)
+      })
+      .catch((err) => {
+        res.json(err)
+      })
+  },
   detailname: (req, res) => {
     const name = req.params.username
     perusahaanModel

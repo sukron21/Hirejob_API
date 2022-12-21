@@ -1,7 +1,7 @@
 require('dotenv').config()
 // deklare exprees
 const express = require('express')
-const { list, destroy, detail, update, detailname, register,login } = require('../controller/perusahaan.controller')
+const { list, destroy, detail, update, detailname, register,login,listpagination } = require('../controller/perusahaan.controller')
 // const{register, login}=require('../controller/auth.controller')
 // const{isAdmin, isCustomer}= require('../middleware/authorization')
 // const jwtAuth = require ('../middleware/jwtAuth.js');
@@ -15,6 +15,7 @@ router
   .get('/perusahaan', list)
   .get('/perusahaan/:id', detail)
   .get('/perusahaan/:username', detailname)
+  .get('/perusahaan/pagination', listpagination)
 //   .post('/user/tambah', insert)
   .put('/perusahaan/:id',update)
   .delete('/perusahaan/:id', destroy)

@@ -17,6 +17,8 @@ try{
     db.connect((err) => {
         if(err){
             throw "Cannot connect to Database";
+        }else{
+            console.log("Databace connect")
         }
     });
 

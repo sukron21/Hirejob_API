@@ -21,6 +21,17 @@ const perusahaanModel = {
       })
     })
   },
+  selectAllLimit: (sort,asc,limit, offset) => {
+    return new Promise((resolve, reject) => {
+      db.query(`SELECT * FROM perusahaans ORDER BY ${sort} ${asc} LIMIT ${limit} OFFSET ${offset}`, (err, result) => {
+        if (err) {
+          reject(err)
+        } else {
+          resolve(result)
+        }
+      })
+    })
+  },
   selectDetail: (id) => {
     return new Promise((resolve, reject) => {
       db.query(`SELECT * FROM perusahaans where id=${id}`, (err, result) => {
@@ -32,11 +43,11 @@ const perusahaanModel = {
     })
   },
   
-  register:({username,email,nama_perusahaan,jabatan, phone, password})=>{
+  register:({username,email,nama_perusahaan,jabatan, phone, password,photo_pub_id,photo_url,photo_secure_url})=>{
     return new Promise((resolve,reject)=>{
         db.query(`insert into perusahaans (username,email,nama_perusahaan,jabatan, phone, password) 
         values
-        ('${username}','${email}', '${nama_perusahaan}', '${jabatan}','${phone}'   ,'${password}')`,(err,res)=>{
+        ('${username}','${email}', '${nama_perusahaan}', '${jabatan}','${phone}','${password}'),${photo_pub_id},${photo_url},${photo_secure_url}`,(err,res)=>{
             if (err) {
                 reject(err)
               }
