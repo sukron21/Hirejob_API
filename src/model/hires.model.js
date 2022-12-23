@@ -23,7 +23,30 @@ const hireModel = {
       })
     })
   },    
-
+  selectjoinUser: (id) => {
+    return new Promise((resolve, reject) => {
+      db.query(`select * from hires left join users on users.id = hires.iduser
+       where iduser = ${id}`, (err, result) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(result);
+        }
+      });
+    });
+  },
+  selectjoinPer: (id) => {
+    return new Promise((resolve, reject) => {
+      db.query(`select * from hires left join perusahaans on perusahaans.id = hires.idperekrut
+       where idperekrut = ${id}`, (err, result) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(result);
+        }
+      });
+    });
+  },
   delete: (id) => {
     return new Promise((resolve, reject) => {
       db.query(`DELETE FROM hires WHERE id = ${id};`, (err, res) => {
@@ -34,12 +57,12 @@ const hireModel = {
       })
     })
   },
-  store: (projek, email, phone, deskripsi, iduser, idperekrut, nama) => {
+  store: (projek, emailper, phone, deskripsi, iduser, idperekrut, nama) => {
     return new Promise((resolve, reject) => {
       db.query(`
-            INSERT INTO hires ( projek, email, phone, deskripsi , iduser, idperekrut, nama)
+            INSERT INTO hires ( projek, emailper, phone, deskripsi , iduser, idperekrut, nama)
             VALUES
-            ( '${projek}','${email}','${phone}','${deskripsi}','${iduser}','${idperekrut}','${nama}')
+            ( '${projek}','${emailper}','${phone}','${deskripsi}','${iduser}','${idperekrut}','${nama}')
             `, (err, res) => {
         if (err) {
           reject(err)
