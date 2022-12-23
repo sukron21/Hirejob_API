@@ -2,7 +2,6 @@ require('dotenv').config()
 // deklare exprees
 const express = require('express')
 const { list, destroy, detail,insert,listjoinuser,listjoinper } = require('../controller/hire.controller')
-// const jwtAuth = require ('../middleware/jwtAuth.js');
 // const upload =require ('../middleware/upload');
 // const remove= require('../middleware/deletefile')
 
