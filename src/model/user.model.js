@@ -83,7 +83,7 @@ const userModel = {
         skill = COALESCE ($11, skill)
         WHERE id = $12
         `,
-        [data.username, data.email, data.phone, data.password, data.jobdesk,data.domisili, data.diskripsi, data.loker, data.instagram, data.linkedin, data.skill, data.id],(err, res) => {
+        [data.username, data.email, data.phone, data.password, data.jobdesk,data.domisili,data.loker, data.diskripsi,  data.instagram, data.linkedin, data.skill, data.id],(err, res) => {
           if (err) {
             reject(err)
           }
