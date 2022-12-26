@@ -26,6 +26,7 @@ const hireModel = {
   selectjoinUser: (id) => {
     return new Promise((resolve, reject) => {
       db.query(`select * from hires left join users on users.id = hires.iduser
+      left join perusahaans on perusahaans.id = hires.idperekrut
        where iduser = ${id}`, (err, result) => {
         if (err) {
           reject(err);
