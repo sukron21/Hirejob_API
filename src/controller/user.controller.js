@@ -143,9 +143,9 @@ const userController = {
             phone,
             password: hash,
             photo:"1",
-            photo_pub_id: "sna73xrmlpaftrwtnzrz",
-            photo_url: "http://res.cloudinary.com/dtqrvb5cj/image/upload/v1671588992/sna73xrmlpaftrwtnzrz.jpg",
-            photo_secure_url: "https://res.cloudinary.com/dtqrvb5cj/image/upload/v1671588992/sna73xrmlpaftrwtnzrz.jpg"
+            photo_pub_id: "bytwfuw8djl12mky1ipi",
+            photo_url: "http://res.cloudinary.com/dtqrvb5cj/image/upload/v1672066602/bytwfuw8djl12mky1ipi.jpg",
+            photo_secure_url: "https://res.cloudinary.com/dtqrvb5cj/image/upload/v1672066602/bytwfuw8djl12mky1ipi.jpg"
           }
           userModel.register(data).then((result)=>{
             success(res, result, 'success','register success')
