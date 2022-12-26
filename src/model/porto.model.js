@@ -27,7 +27,7 @@ const portoModel = {
 
   selectDetail: (id) => {
     return new Promise((resolve, reject) => {
-      db.query(`SELECT * FROM portofolio where id=${id}`, (err, result) => {
+      db.query(`SELECT * FROM portofolio where iduser=${id}`, (err, result) => {
         if (err) {
           reject(err)
         }
