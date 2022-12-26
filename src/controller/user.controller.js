@@ -93,7 +93,7 @@ const userController = {
       })
   },
    updatePhoto:async (req, res) => {
-    console.log('update recipe')
+    // console.log('update recipe')
     const id = req.params.id
     // const image=req.file.filename
     // eslint-disable-next-line camelcase
