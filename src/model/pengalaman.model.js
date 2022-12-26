@@ -26,7 +26,7 @@ const pengalamanModel = {
   },
   selectDetail: (id) => {
     return new Promise((resolve, reject) => {
-      db.query(`SELECT * FROM pengalaman where id=${id}`, (err, result) => {
+      db.query(`SELECT * FROM pengalaman where iduser=${id}`, (err, result) => {
         if (err) {
           reject(err)
         }
